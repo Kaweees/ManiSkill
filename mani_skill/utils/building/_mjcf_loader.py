@@ -47,6 +47,7 @@ from typing import Any, Literal, Tuple, Union
 from xml.etree.ElementTree import Element
 
 import defusedxml.ElementTree as ET
+from xml.etree.ElementTree import Element
 import numpy as np
 import sapien
 from sapien import ActorBuilder, Pose
@@ -596,7 +597,7 @@ class MJCFLoader:
         joints = body.findall("joint")
         # if body has no joints, it is a fixed joint
         if len(joints) == 0:
-            joints = [ET.Element("joint", attrib=dict(type="fixed"))]
+            joints = [Element("joint", attrib=dict(type="fixed"))]
         for i, joint in enumerate(joints):
             # note there can be multiple joints here. We create some dummy links to simulate that
             incoming_attributes = []
