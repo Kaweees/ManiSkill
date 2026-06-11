@@ -40,7 +40,7 @@ def get_dependencies():
         "trimesh",
         "imageio",
         "imageio[ffmpeg]",
-        "mplib @ git+https://github.com/haosulab/MPlib ;platform_system=='Linux'",
+        "mplib @ git+https://github.com/haosulab/MPlib ;platform_system=='Linux' and platform_machine=='x86_64'",  # mplib->toppra has no aarch64 wheels; motion planning unsupported there
         "IPython",
         "pytorch_kinematics==0.7.6",
         "defusedxml",
