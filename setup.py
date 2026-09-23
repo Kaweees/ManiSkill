@@ -40,7 +40,7 @@ def get_dependencies():
         "trimesh",
         "imageio",
         "imageio[ffmpeg]",
-        "mplib==0.1.1;platform_system=='Linux'",
+        "mplib @ git+https://github.com/haosulab/MPlib ;platform_system=='Linux'",
         "IPython",
         "pytorch_kinematics==0.7.6",
         "defusedxml",
